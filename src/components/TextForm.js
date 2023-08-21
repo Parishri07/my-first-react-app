@@ -16,6 +16,10 @@ export default function TextForm(props) {
     setText(m);
   }
 
+  const handleClearClick = ()=>{
+    setText(' ');
+  }
+
   const handleTrim = ()=>{
     let o = text.slice(0,10)
     setText(o);
@@ -26,6 +30,10 @@ export default function TextForm(props) {
     setText(event.target.value);
   }
 
+  const displayStyle = {
+    display: 'flex'
+  };
+
   return (
     <>
     <div className='container'>
@@ -34,6 +42,11 @@ export default function TextForm(props) {
     <button class="btn btn-primary my-2" onClick={handleUpClick} >Convert to Uppercase</button>
     <button class="btn btn-primary my-3 mx-3" onClick={handleLoClick} >Convert to Lowercase</button>
     <button class="btn btn-primary my-3 mx-1" onClick={handleTrim} >Trim to 10 characters</button>
+    <button class="btn btn-primary my-3 mx-1" onClick={handleClearClick} >Clear Text</button>
+    </div>
+    <div className='container my-3' style={displayStyle}>
+      <p>Enter website url to read from: </p>
+      <input class="form-control" type="text"></input>
     </div>
     <div className="container my-5">
       <h3>Text Summary</h3>
