@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 
 export default function TextForm(props) {
   const[text, setText] = useState(' ');
+  // const[website, setURL] = useState(' ');
   
   const handleUpClick = ()=>{
     // console.log("clicked");
@@ -30,9 +31,42 @@ export default function TextForm(props) {
     setText(event.target.value);
   }
 
+//   const handleChange = (event)=>{
+//     setURL(event.target.value);
+//       // 1. Fetch the webpage's HTML content
+// fetch(event.target.value)
+// .then(response => {
+//   // Check if the request was successful
+//   if (!response.ok) {
+//     throw new Error('Network response was not ok');
+//   }
+//   return response.text(); // Get the HTML content as text
+// })
+// .then(html => {
+//   // 2. Extract text from the HTML
+//   const text = extractTextFromHTML(html);
+
+//   // 3. Do something with the extracted text
+//   console.log(text);
+// })
+// .catch(error => {
+//   console.error('There was a problem with the fetch operation:', error);
+// });
+//   }
+
   const displayStyle = {
     display: 'flex'
   };
+
+
+
+// Function to extract text from HTML (you can customize this as needed)
+// function extractTextFromHTML(html) {
+// const parser = new DOMParser();
+// const doc = parser.parseFromString(html, 'text/html');
+// return doc.body.textContent;
+// }
+
 
   return (
     <>
@@ -44,10 +78,10 @@ export default function TextForm(props) {
     <button class="btn btn-primary my-3 mx-1" onClick={handleTrim} >Trim to 10 characters</button>
     <button class="btn btn-primary my-3 mx-1" onClick={handleClearClick} >Clear Text</button>
     </div>
-    <div className='container my-3' style={displayStyle}>
+    {/* <div className='container my-3' style={displayStyle}>
       <p>Enter website url to read from: </p>
-      <input class="form-control" type="text"></input>
-    </div>
+      <input class="form-control" type="text" value={website} onChange={handleChange}></input>
+    </div> */}
     <div className="container my-5">
       <h3>Text Summary</h3>
       <p>{text.split(" ").length} words and {text.length} characters</p>
