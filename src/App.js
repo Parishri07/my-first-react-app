@@ -2,18 +2,27 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
+import React,{useState} from 'react'
 
 
 function App() {
+
+  const[mode, setMode] = useState('light');
+
+  const toggleMode = ()=>{
+     if(mode === 'light')
+     setMode('dark');
+    else
+    setMode('light');
+  }
+
   return (
     <>
-    {/* <Navbar title="TextUtils2"/> */}
     {/* <Navbar /> */}
-    <Navbar title="TextUtils" aboutText="About TextUtlis"/>
+    <Navbar title="TextUtils" mode={mode} changeMode={toggleMode}/>
     <div className="container my-3">
     <TextForm heading="Enter text to analyse"/>
     </div>
-    
     </>
   );
 }
