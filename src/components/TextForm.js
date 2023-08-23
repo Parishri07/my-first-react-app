@@ -70,9 +70,9 @@ export default function TextForm(props) {
 
   return (
     <>
-    <div className='container'>
-    <h1>{props.heading}</h1>
-    <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+    <div className={`container text-${props.mode === 'dark'?'white':'#042743'}`}>
+    <h2>{props.heading}</h2>
+    <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode === 'dark'?"#97DEFF":'white', color: props.mode === 'dark'?'#1D267D':'black'}} id="myBox" rows="8"></textarea>
     <button class="btn btn-primary my-2" onClick={handleUpClick} >Convert to Uppercase</button>
     <button class="btn btn-primary my-3 mx-3" onClick={handleLoClick} >Convert to Lowercase</button>
     <button class="btn btn-primary my-3 mx-1" onClick={handleTrim} >Trim to 10 characters</button>
@@ -82,12 +82,12 @@ export default function TextForm(props) {
       <p>Enter website url to read from: </p>
       <input class="form-control" type="text" value={website} onChange={handleChange}></input>
     </div> */}
-    <div className="container my-5">
+    <div className={`container my-5 text-${props.mode === 'dark'?'white':'#042743'}`}>
       <h3>Text Summary</h3>
       <p>{text.split(" ").length} words and {text.length} characters</p>
       <p>{0.008 * text.split(" ").length} minutes to read</p>
       <h4>Preview</h4>
-      <p>{text}</p>
+      <p>{text.length>0 ? text :"Enter something in the text box above to preview it here"}</p>
     </div>
     </>
     
