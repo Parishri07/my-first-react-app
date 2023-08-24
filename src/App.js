@@ -26,21 +26,12 @@ function App() {
   }
 
   const showAlert = (message, type) =>{
-    let textColor="black";
-    
-    if(mode === 'light')
-    textColor = 'black';
-  else
-  textColor = 'white';
-
-
     setAlert({
       msg: message,
-      type: type,
-      color: textColor
+      type: type
     })
 
-    setTimeout(()=>{
+    setTimeout(() => {
       setAlert(null)
     },1500);
 
