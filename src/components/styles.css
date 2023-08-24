@@ -1,0 +1,37 @@
+
+.container-color-pallete{
+  border-top:rgb(241, 236, 236) 3px solid;
+  border-bottom:rgb(241, 236, 236) 3px solid;
+  border-radius: 5px;
+  width:200px;
+  height:35px;
+  display: inline-block;
+}
+.first{
+    border-left:rgb(241, 236, 236) 3px solid;
+    /* border-right:rgb(241, 236, 236) 3px solid; */
+    width: 66px;
+    height:35px;
+    position: relative;
+    background-color: #79155B;
+}
+.second{
+    border-left:rgb(241, 236, 236) 3px solid;
+    border-right:rgb(241, 236, 236) 3px solid;
+    width: 65px;
+    height:35px;
+    left:65px;
+    bottom:35px;
+    position: relative;
+    background-color: turquoise;
+}
+.third{
+    /* border-left:rgb(241, 236, 236) 3px solid; */
+    border-right:rgb(241, 236, 236) 3px solid;
+    width: 65px;
+    height:35px;
+    position: relative;
+    left:130px;
+    bottom:70px;
+    background-color: #0B666A;
+}

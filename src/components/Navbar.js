@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './styles.css'
 
 function Navbar(props) {
     return (
@@ -24,13 +25,15 @@ function Navbar(props) {
                         <button className="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                     </form> */}
                 </div>
-                <div className={`form-check form-switch text-${props.mode === 'light'?'dark':'light'}`}>
-                        {/* <input className="form-check-input" onClick={props.changeMode} type="checkbox" id="flexSwitchCheckChecked" /> */}
-                        <div style={display="flex"}>
-                          
-                        </div>
-                        <label className="form-check-label"  htmlfor="flexSwitchCheckChecked">Enable Dark Mode</label>
+                <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
+                    {/* <input className="form-check-input" onClick={props.changeMode} type="checkbox" id="flexSwitchCheckChecked" /> */}
+                    <div className='container-color-pallete'>
+                        <div class="first"></div>
+                        <div class="second"></div>
+                        <div class="third"></div>
                     </div>
+                    <label className="form-check-label" htmlfor="flexSwitchCheckChecked">Enable Dark Mode</label>
+                </div>
             </nav>
         </div>
     )
