@@ -28,7 +28,7 @@ function App() {
   const showAlert = (message, type) =>{
     let textColor="black";
     
-    if(mode == 'light')
+    if(mode === 'light')
     textColor = 'black';
   else
   textColor = 'white';
